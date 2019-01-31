@@ -16,7 +16,7 @@ import * as moment from 'moment';
 })
 export class ReservationComponent implements OnInit {
   reserveDate: Date;
-  //guestCount: Number;
+  guestCount: Number;
   //customerName: String;
   restaurants: Restaurant[];
   //selectedRestaurant: Restaurant;
