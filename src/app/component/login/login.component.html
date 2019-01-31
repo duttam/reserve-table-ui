@@ -1,0 +1,23 @@
+<div *ngIf="!auth.isLoggedIn()">
+
+<form class="ui big form" #loginForm="ngForm" (submit)="onSubmit(loginForm)">
+  <div class="ui-g-12" style="text-align:left;">
+       <label class="login-label">Username</label>
+              <div class="login-input">
+                    <input type="text" name="username" ngModel class="ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+              </div>
+   </div>
+   <div class="ui-g-12" style="text-align:left;">
+        <label class="login-label">Password</label>
+           <div class="login-input">
+                    <input type="password" name="password" ngModel class="ui-inputtext ui-widget ui-state-default ui-corner-all"/>
+            </div>
+   </div>
+   <div class="ui-g-12 ui-md-6 button-pane">
+         <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+                 <span class="ui-button-text ui-c">Sign In</span>
+          </button>
+   </div>
+ </form>
+</div>
+            

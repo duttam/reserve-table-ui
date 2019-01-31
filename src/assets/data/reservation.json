@@ -1,0 +1,37 @@
+{"data":[
+    {
+        "reservationId": "1e881e6b-882f-48c3-ae79-51ec4a7b801e",
+        "reservationDate": "2019-01-15 09:30 AM",
+        "noOfGuest": 12,
+        "reserveBy": {
+            "customerId": "0b3b05be-e0cc-498e-8d0c-03df3a0937bf",
+            "firstname": "c1-firstname",
+            "lastname": "c1-lastname",
+            "customerEmail": null,
+            "status": null
+        },
+        "reservedAt": {
+            "restaurantId": "0464e11d-50d6-4205-bc9b-9e937b748ab3",
+            "restaurantName": "restaurant-2"
+        },
+        "tableName": null
+    },
+    {
+        "reservationId": "65bd91eb-f60c-4a41-a75e-b674de4fa72a",
+        "reservationDate": "2019-01-15 09:30 AM",
+        "noOfGuest": 12,
+        "reserveBy": {
+            "customerId": "0b3b05be-e0cc-498e-8d0c-03df3a0937bf",
+            "firstname": "c1-firstname",
+            "lastname": "c1-lastname",
+            "customerEmail": null,
+            "status": null
+        },
+        "reservedAt": {
+            "restaurantId": "0464e11d-50d6-4205-bc9b-9e937b748ab3",
+            "restaurantName": "restaurant-2"
+        },
+        "tableName": null
+    }
+]
+}

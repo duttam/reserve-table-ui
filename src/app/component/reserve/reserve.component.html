@@ -1,0 +1,27 @@
+
+
+<p-table  [columns]="column" [value]="reservations" selectionMode="single"  [paginator]="true" rows="10">
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+          <td>{{rowData.reservationId}}</td>
+          <td>{{rowData.reservationDate}}</td>
+          <td>{{rowData.noOfGuest}}</td>
+          <td>{{rowData.reserveBy.firstname}} {{rowData.reserveBy.lastname}}</td>
+          <td>{{rowData.reservedAt.restaurantName}}</td>
+          
+      </tr>
+      
+  </ng-template>
+
+</p-table>
+<p></p>
+<div align="center">
+    <button pButton type="button" label="ADD" (click)="addReservation()" ></button>
+</div>

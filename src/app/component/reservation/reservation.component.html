@@ -1,0 +1,22 @@
+<form class="ui big form" #reserveForm="ngForm" (submit)="onSubmit(reserveForm)">
+<h3>Reservation Date</h3>
+<p-calendar name="reservationDate" ngModel></p-calendar>
+
+
+<h3 class="first">No Of Guest</h3>
+<input type="number"  placeholder="Guest Count" name="noOfGuest" ngModel > 
+
+
+<h3>Restaurant Name</h3>
+<p-dropdown [options]="restaurantItems" name="reservedAt" ngModel
+ [style]="{'width':'150px'}" editable="true" placeholder="Select a Restaurant"></p-dropdown>
+
+ <h3 class="first">Customer Name</h3>
+ <p-dropdown [options]="customerItems" name="reserveBy" ngModel
+ [style]="{'width':'150px'}" editable="true" placeholder="Select a Customer"></p-dropdown>
+ <p></p>
+
+<button pButton type="submit" label="SUBMIT" class="ui-button-success"></button>
+</form>
+
+

@@ -1,0 +1,8 @@
+<app-login></app-login>
+
+<div *ngIf="authServica.isLoggedIn()" align="right">
+    <button pButton type="button" label="Logout" class="ui-button-danger" 
+    (click)= "logOut()"></button>
+</div>
+<p></p>
+<router-outlet></router-outlet>
