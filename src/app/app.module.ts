@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -17,6 +18,8 @@ import { ReserveComponent } from './component/reserve/reserve.component';
 import { LoginComponent } from './component/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReservationComponent } from './component/reservation/reservation.component';
+import { EmployeeComponent } from './component/employee/employee.component';
+import { Test1Component } from './component/test1/test1.component';
 
 
 @NgModule({
@@ -25,12 +28,15 @@ import { ReservationComponent } from './component/reservation/reservation.compon
         CarstableComponent,
         ReserveComponent,
         LoginComponent,
-        ReservationComponent
+        ReservationComponent,
+        EmployeeComponent,
+        Test1Component
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
+        ReactiveFormsModule,
         TableModule,
         HttpClientModule,
         InputTextModule,

@@ -35,23 +35,23 @@ export class ReservationService {
     });
 
   }
-  posttReservation(value: any):Observable<any>{
-    let payload: String = JSON.stringify(value);
-    let httpHeader: HttpHeaders = new HttpHeaders({
-      'Content-Type':  'application/json',
-      'Authorization': "Bearer "+ this.auth.getToken(),
-      'Accept':'application/json'
-    });
+  // posttReservation(value: any):Observable<any>{
+  //   let payload: String = JSON.stringify(value);
+  //   let httpHeader: HttpHeaders = new HttpHeaders({
+  //     'Content-Type':  'application/json',
+  //     'Authorization': "Bearer "+ this.auth.getToken(),
+  //     'Accept':'application/json'
+  //   });
 
-    //let httpParams: HttpParams = {}
+  //   //let httpParams: HttpParams = {}
     
-    return this.http.post(this.url,payload,{
-      'headers' : httpHeader,
-      'responseType': 'json',
+  //   return this.http.post(this.url,payload,{
+  //     'headers' : httpHeader,
+  //     'responseType': 'json',
       
-    });
+  //   });
 
-  }
+  // }
 
   postReservation(value: any):Observable<any> {
     let payload: String = JSON.stringify(value);

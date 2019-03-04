@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Restaurant } from 'src/app/domain/restaurant';
 import { NgForm } from '@angular/forms';
 import { ReservationService } from 'src/app/services/reservation.service';
@@ -15,6 +15,8 @@ import * as moment from 'moment';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent implements OnInit {
+  //@ViewChild(h3compo)
+  
   reserveDate: Date;
   guestCount: Number;
   //customerName: String;

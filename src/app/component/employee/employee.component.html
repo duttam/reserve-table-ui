@@ -1,0 +1,79 @@
+
+<p-table  [columns]="column" [value]="employees" selectionMode="single" [paginator]="true" rows="10">
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Profession</th>
+          <th>Department</th>
+
+          <th>Action</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr [pSelectableRow]="rowData">
+          <td>{{rowData.firstName}}</td>
+          <td>{{rowData.lastName}}</td>
+          <td>{{rowData.profession}}</td>
+          <td>{{rowData.department}}</td>
+         
+          <td><button pButton type="button" label="EDIT"  (click)="edit(rowData)" ></button></td>
+          
+      </tr>
+      
+  </ng-template>
+
+</p-table>
+
+<p></p>
+<div align="center">
+    <button pButton type="button" label="ADD" (click)="add()" ></button>
+</div>
+
+<p-dialog header="Employee Details" [(visible)]="displayDialog"
+          [responsive]="true" showEffect="fade" [modal]="true">
+    <form [formGroup]="form" (submit)="save(form)">
+        <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="employeeForDialog">
+            <div class="ui-g ui-g-12 ui-g-nopad">
+                <div class="ui-g-12 ui-md-3 ui-label">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="ui-g-12 ui-md-9">
+         
+                    <input pInputText id="firstName" formControlName="firstName" required
+                           />
+                </div>
+            </div>
+            <div class="ui-g ui-g-12 ui-g-nopad">
+                <div class="ui-g-12 ui-md-3 ui-label">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="ui-g-12 ui-md-9">
+                    <input pInputText id="lastName" formControlName="lastName" required
+                           />
+                </div>
+            </div>
+            <div class="ui-g ui-g-12 ui-g-nopad">
+                <div class="ui-g-12 ui-md-3 ui-label">
+                    <label for="prof">Profession</label>
+                </div>
+                <div class="ui-g-12 ui-md-9">
+                    <input pInputText id="profession" formControlName="profession" required
+                           />
+                </div>
+            </div>
+            <div class="ui-g ui-g-12 ui-g-nopad">
+                <div class="ui-g-12 ui-md-3 ui-label">
+                    <label for="depart">Department</label>
+                </div>
+                <div class="ui-g-12 ui-md-9">
+                    <input pInputText id="department" formControlName="department" required
+                           />
+                </div>
+            </div>
+        </div>
+        <p></p>
+        <button pButton type="submit" label="SUBMIT" class="ui-button-success"></button>
+    </form>
+   
+</p-dialog>

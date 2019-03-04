@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
         this.auth.setToken(data.token);
         console.log(data);
-        this.router.navigate(['/reserve']);
+        this.router.navigate(['/employee']);
       },
       error => console.log(error.message));
   }

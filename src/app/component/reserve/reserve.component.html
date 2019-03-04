@@ -6,6 +6,7 @@
           <th *ngFor="let col of columns">
               {{col.header}}
           </th>
+          <th>Action</th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowData let-columns="columns">
@@ -15,6 +16,7 @@
           <td>{{rowData.noOfGuest}}</td>
           <td>{{rowData.reserveBy.firstname}} {{rowData.reserveBy.lastname}}</td>
           <td>{{rowData.reservedAt.restaurantName}}</td>
+          <td><button pButton type="button" label="EDIT" ></button></td>
           
       </tr>
       
@@ -23,5 +25,5 @@
 </p-table>
 <p></p>
 <div align="center">
-    <button pButton type="button" label="ADD" (click)="addReservation()" ></button>
+    <button pButton type="button" label="ADD" (click)="add()" ></button>
 </div>
